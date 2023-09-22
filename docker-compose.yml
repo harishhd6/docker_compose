@@ -1,0 +1,14 @@
+version: '3'
+services:
+  my-java-app:
+    image: my-java-app
+    depends_on:
+      - my-database
+
+  my-database:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: mydb
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+
